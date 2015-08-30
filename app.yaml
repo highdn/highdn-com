@@ -8,9 +8,14 @@ handlers:
   static_files: favicon.ico
   upload: favicon.ico
 
-- url: /components
+- url: /bower_components
   static_dir: bower_components
 
-- url: /.*
+- url: /
+  static_files: index.html
+  upload: index.html
+  secure: always
+
+- url: /.+
   script: _go_app
   secure: always

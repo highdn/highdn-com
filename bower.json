@@ -1,0 +1,19 @@
+{
+  "name": "highdn-com",
+  "version": "0.1.0",
+  "homepage": "https://github.com/highdn/highdn-com",
+  "authors": [
+    "Dmitriy Khramtsov <highdn@gmail.com>"
+  ],
+  "license": "GPLv3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  }
+}

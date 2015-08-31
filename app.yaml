@@ -11,6 +11,9 @@ handlers:
 - url: /bower_components
   static_dir: bower_components
 
+- url: /components
+  static_dir: components
+
 - url: /sw-import.js
   static_files: sw-import.js
   upload: sw-import.js

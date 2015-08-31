@@ -1,0 +1,90 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tab.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../bower_components/platinum-sw/platinum-sw-register.html">
+<link rel="import" href="../../bower_components/platinum-sw/platinum-sw-cache.html">
+
+<dom-module id="social-profile">
+
+  <style>
+    :host {
+      display: block;
+      box-sizing: border-box;
+    }
+
+    div {
+      padding: 24px;
+    }
+  </style>
+
+  <template>
+    <paper-toolbar class="tall">
+      <paper-icon-button src="{{avatar}}"></paper-icon-button>
+      <span class="title">{{name}}</span>
+      <paper-icon-button icon="refresh"></paper-icon-button>
+      <paper-icon-button icon="add">+</paper-icon-button>
+
+      <paper-tabs selected="{{selected}}" class="bottom self-end" style="width: 300px;">
+        <paper-tab>Google</paper-tab>
+        <paper-tab>Facebook</paper-tab>
+        <paper-tab>LinkedIn</paper-tab>
+      </paper-tabs>
+    </paper-toolbar>
+
+    <iron-pages selected="{{selected}}">
+      <div><a href="{{google}}">{{google}}</a></div>
+      <div><a href="{{facebook}}">{{facebook}}</a></div>
+      <div><a href="{{linkedin}}">{{linkedin}}</a></div>
+    </iron-pages>
+  </template>
+
+</dom-module>
+
+<script>
+
+  Polymer({
+
+    is: 'social-profile',
+
+    properties: {
+      name: String,
+      avatar: String,
+      google: String,
+      facebook: String,
+      linkedin: String,
+    },
+
+    // Element Lifecycle
+
+    ready: function() {
+      // `ready` is called after all elements have been configured, but
+      // propagates bottom-up. This element's children are ready, but parents
+      // are not.
+      //
+      // This is the point where you should make modifications to the DOM (when
+      // necessary), or kick off any processes the element wants to perform.
+    },
+
+    attached: function() {
+      // `attached` fires once the element and its parents have been inserted
+      // into a document.
+      //
+      // This is a good place to perform any work related to your element's
+      // visual state or active behavior (measuring sizes, beginning animations,
+      // loading resources, etc).
+    },
+
+    detached: function() {
+      // The analog to `attached`, `detached` fires when the element has been
+      // removed from a document.
+      //
+      // Use this to clean up anything you did in `attached`.
+    },
+
+  });
+
+</script>

@@ -11,11 +11,16 @@ handlers:
 - url: /bower_components
   static_dir: bower_components
 
+- url: /sw-import.js
+  static_files: sw-import.js
+  upload: sw-import.js
+  secure: always
+
 - url: /
   static_files: index.html
   upload: index.html
-  #secure: always
+  secure: always
 
 - url: /.+
   script: _go_app
-  #secure: always
+  secure: always

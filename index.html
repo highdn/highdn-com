@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Dmitriy Khramtsov</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
     <link rel="import" href="bower_components/platinum-sw/platinum-sw-register.html">
     <link rel="import" href="bower_components/platinum-sw/platinum-sw-cache.html">
+    <style is="custom-style">
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <platinum-sw-register auto-register>
-      <platinum-sw-cache></platinum-sw-cache>
+    <paper-toolbar class="tall">
+
+      <paper-icon-button src="favicon.ico"></paper-icon-button>
+      <span class="title">Dmitriy Khramtsov</span>
+      <paper-icon-button icon="refresh"></paper-icon-button>
+      <paper-icon-button icon="add">+</paper-icon-button>
+
+      <paper-tabs selected="0" class="bottom self-end" style="width: 300px;">
+        <paper-tab>Google+</paper-tab>
+        <paper-tab>Facebook</paper-tab>
+        <paper-tab>LinkedIn</paper-tab>
+      </paper-tabs>
+
+      <div class="bottom flex"></div>
+
+    </paper-toolbar>
+
+    <platinum-sw-register auto-register clients-claim skip-waiting>
+      <platinum-sw-cache default-cache-strategy="networkFirst"></platinum-sw-cache>
     </platinum-sw-register>
   </body>
 </html>

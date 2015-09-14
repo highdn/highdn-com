@@ -14,10 +14,6 @@
       display: block;
       box-sizing: border-box;
     }
-
-    div {
-      padding: 24px;
-    }
   </style>
 
   <template>
@@ -35,64 +31,9 @@
     </paper-toolbar>
 
     <iron-pages selected="{{selected}}">
-      <div><a href="{{google}}">{{google}}</a>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-    pellentesque massa id gravida euismod. Maecenas dictum pellentesque erat
-    nec interdum. In ultricies neque porttitor, dapibus nisl vestibulum,
-    tempor urna. Morbi posuere, leo quis tristique tempus, odio arcu
-    consequat mauris, ultrices efficitur enim est id ligula. Aliquam
-    lobortis felis id ornare tempor. Phasellus nec urna vel libero euismod
-    blandit. Morbi semper leo rhoncus diam pulvinar, vitae semper risus
-    feugiat.</p>
-    
-    <p>Praesent nunc est, pharetra id pellentesque ac, suscipit quis massa.
-    Nullam lobortis velit eget nisl dapibus, id blandit lectus tincidunt. Ut
-    id rutrum tellus. Fusce a magna eget ipsum ornare gravida a ut justo. Ut
-    fermentum eros sed interdum gravida. Vivamus ullamcorper magna sed
-    rhoncus laoreet. Proin suscipit faucibus ipsum a sodales. Morbi
-    fringilla ligula non scelerisque imperdiet. Maecenas finibus hendrerit
-    lorem, eu tempor libero luctus in. Suspendisse suscipit dapibus augue a
-    vestibulum. Aenean ut augue augue. Phasellus eu accumsan felis,
-    tristique rhoncus nulla. Maecenas sit amet mollis nulla. Maecenas eu
-    neque vel mauris maximus elementum quis maximus lacus. Morbi venenatis
-    turpis urna, id dapibus eros fringilla non. Nulla facilisi.</p>
-      </div>
- 
-      <div><a href="{{facebook}}">{{facebook}}</a>
-     <p>Donec vulputate tempor lectus in scelerisque. Nulla facilisi. Morbi
-    interdum ante a viverra rhoncus. Nulla congue, felis sit amet ultricies
-    lacinia, lorem lectus bibendum lectus, ut cursus purus eros vel ligula.
-    Proin molestie massa in arcu imperdiet semper. Phasellus sed lectus
-    justo. Sed vel lacus nec urna hendrerit dictum quis nec ex. Proin
-    egestas elementum nunc ut ullamcorper. Donec metus erat, rutrum at arcu
-    sit amet, eleifend euismod arcu. Aenean tempor mauris at felis
-    facilisis, eget ornare ligula consequat. Quisque dictum arcu rhoncus,
-    placerat erat eu, facilisis enim. Vestibulum ligula lectus, interdum id
-    est quis, porta fermentum risus. Vestibulum dignissim bibendum
-    hendrerit. Quisque ullamcorper mi ante, aliquam condimentum quam varius
-    at.</p>
-    
-    <p>Aliquam lacinia justo magna, quis elementum eros dictum ut. Fusce
-    vulputate magna ut mi consectetur, eu volutpat dolor scelerisque.
-    Maecenas et dui vel magna consequat viverra vulputate in est. Integer
-    nec diam accumsan massa ultricies sodales. Maecenas id euismod arcu.
-    Aliquam id urna justo. Etiam eget feugiat ex. Sed quis egestas lacus.
-    Duis nisl neque, finibus in cursus sed, pharetra in urna. Nulla quis
-    condimentum nibh. Etiam viverra erat finibus dui malesuada, id ornare
-    tellus vestibulum. Nullam at libero vel massa porttitor auctor vitae nec
-    enim. Aliquam euismod, ligula vel egestas tristique, massa enim pharetra
-    leo, vitae tristique dolor ligula interdum mi.</p>
-     </div>
- 
-      <div><a href="{{linkedin}}">{{linkedin}}</a>
-    <p>Nullam purus justo, volutpat sit amet pulvinar non, finibus eget libero.
-    Praesent ultrices, nisl eu placerat lacinia, ligula arcu tincidunt
-    ligula, et condimentum sapien ante eu dolor. In hac habitasse platea
-    dictumst. Integer porta consequat augue eget vulputate. Ut at fringilla
-    metus. Duis placerat vitae metus ac lacinia. Donec elementum est mi,
-    quis vehicula turpis aliquam id. Vestibulum id tempus erat, ac faucibus
-    nisl.</p>
-      </div>
+      <content select="google"></content>
+      <content select="facebook"></content>
+      <content select="linkedin"></content>
     </iron-pages>
   </template>
 
@@ -107,10 +48,10 @@
     properties: {
       name: String,
       avatar: String,
-      google: String,
-      facebook: String,
-      linkedin: String,
-      selected: String,
+      selected: {
+        type: Number,
+        value: 0,
+      },
     },
 
     // Element Lifecycle

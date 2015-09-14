@@ -9,11 +9,25 @@
     <link rel="import" href="bower_components/platinum-sw/platinum-sw-register.html" />
     <link rel="import" href="bower_components/platinum-sw/platinum-sw-cache.html" />
     <link rel="import" href="components/social-profile/social-profile.html" />
+    <link rel="import" href="bower_components/paper-button/paper-button.html" />
     <style>
       body {
         font-family: 'Roboto', sans-serif;
         margin: 0;
         padding: 0;
+      }
+      a {
+        display: block;
+        padding: 20px;
+      }
+      a img {
+        display: block;
+        max-width: 100%;
+        padding-top: 20px;
+      }
+      paper-button {
+        background: green;
+        color: white;
       }
     </style>
   </head>
@@ -21,10 +35,25 @@
     <platinum-sw-register auto-register clients-claim skip-waiting reload-on-install>
       <platinum-sw-cache default-cache-strategy="networkFirst"></platinum-sw-cache>
     </platinum-sw-register>
-    <social-profile name="Dmitriy Khramtsov" avatar="favicon.ico"
-                    google="https://plus.google.com/+DmitriyKhramtsov"
-                    facebook="https://www.facebook.com/highdn"
-                    linkedin="https://www.linkedin.com/in/highdn"
-                    selected="0" />
+    <social-profile name="Dmitriy Khramtsov" avatar="favicon.ico">
+      <google>
+        <a href="https://plus.google.com/+DmitriyKhramtsov">
+          <paper-button raised>https://profiles.google.com/highdn</paper-button>
+          <img src="https://lh4.googleusercontent.com/-SizZkodwCLE/VfZQhiGTFPI/AAAAAAABFE8/vnBdnxP1gSg/w400-h565-no/sketch%2B-%2Btree.png" />
+        </a>
+      </google>
+      <facebook>
+        <a href="https://www.facebook.com/highdn">
+          <paper-button raised>https://www.facebook.com/highdn</paper-button>
+          <img src="https://lh6.googleusercontent.com/-nA9wmrnPSWw/VfZQhj0WtzI/AAAAAAABFE8/0faykIyXEB0/w400-h565-no/sketch%2B-%2Bsurf.png" />
+        </a>
+      </facebook>
+      <linkedin>
+        <a href="https://www.linkedin.com/in/highdn">
+          <paper-button raised>https://www.linkedin.com/in/highdn</paper-button>
+          <img src="https://lh6.googleusercontent.com/-PNlU5ve8QTc/VfZQhs_D1NI/AAAAAAABFE8/wJ77NTTaIrs/w400-h565-no/sketch%2B-%2Bschool.png" />
+        </a>
+      </linkedin>
+    </social-profile>
   </body>
 </html>

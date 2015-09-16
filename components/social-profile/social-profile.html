@@ -14,14 +14,17 @@
       display: block;
       box-sizing: border-box;
     }
+    a {
+      color: inherit;
+    }
   </style>
 
   <template>
-    <paper-toolbar class="tall">
+    <paper-toolbar class="medium-tall">
       <paper-icon-button src="{{avatar}}"></paper-icon-button>
       <span class="title">{{name}}</span>
-      <paper-icon-button icon="refresh"></paper-icon-button>
-      <paper-icon-button icon="add">+</paper-icon-button>
+      <a href="{{mail}}"><paper-icon-button icon="mail"></paper-icon-button></a>
+      <a href="{{payment}}"><paper-icon-button icon="payment"></paper-icon-button></a>
 
       <paper-tabs selected="{{selected}}" class="bottom self-end" style="width: 300px;">
         <paper-tab>Google</paper-tab>
@@ -48,6 +51,8 @@
     properties: {
       name: String,
       avatar: String,
+      mail: String,
+      payment: String,
       selected: {
         type: Number,
         value: 0,

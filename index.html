@@ -16,16 +16,17 @@
         margin: 0;
         padding: 0;
       }
-      a {
+      a.profile {
         display: block;
         padding: 20px;
       }
-      a img {
+      a.profile img {
         display: block;
         max-width: 100%;
         padding-top: 20px;
       }
       paper-button {
+        text-transform: none;
         background: green;
         color: white;
       }
@@ -35,22 +36,25 @@
     <platinum-sw-register auto-register clients-claim skip-waiting reload-on-install>
       <platinum-sw-cache default-cache-strategy="networkFirst"></platinum-sw-cache>
     </platinum-sw-register>
-    <social-profile name="Dmitriy Khramtsov" avatar="favicon.ico">
+    <social-profile name="Dmitriy Khramtsov"
+                    avatar="favicon.ico"
+                    mail="mailto:highdn@gmail.com"
+                    payment="https://www.paypal.me/highdn">
       <google>
-        <a href="https://plus.google.com/+DmitriyKhramtsov">
-          <paper-button raised>https://profiles.google.com/highdn</paper-button>
+        <a href="https://plus.google.com/+DmitriyKhramtsov" class="profile">
+          <paper-button raised>https://profiles.google.com/<b>highdn</b></paper-button>
           <img src="https://lh4.googleusercontent.com/-SizZkodwCLE/VfZQhiGTFPI/AAAAAAABFE8/vnBdnxP1gSg/w400-h565-no/sketch%2B-%2Btree.png" />
         </a>
       </google>
       <facebook>
-        <a href="https://www.facebook.com/highdn">
-          <paper-button raised>https://www.facebook.com/highdn</paper-button>
+        <a href="https://www.facebook.com/highdn" class="profile">
+          <paper-button raised>https://www.facebook.com/<b>highdn</b></paper-button>
           <img src="https://lh6.googleusercontent.com/-nA9wmrnPSWw/VfZQhj0WtzI/AAAAAAABFE8/0faykIyXEB0/w400-h565-no/sketch%2B-%2Bsurf.png" />
         </a>
       </facebook>
       <linkedin>
-        <a href="https://www.linkedin.com/in/highdn">
-          <paper-button raised>https://www.linkedin.com/in/highdn</paper-button>
+        <a href="https://www.linkedin.com/in/highdn" class="profile">
+          <paper-button raised>https://www.linkedin.com/in/<b>highdn</b></paper-button>
           <img src="https://lh6.googleusercontent.com/-PNlU5ve8QTc/VfZQhs_D1NI/AAAAAAABFE8/wJ77NTTaIrs/w400-h565-no/sketch%2B-%2Bschool.png" />
         </a>
       </linkedin>

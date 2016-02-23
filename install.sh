@@ -3,7 +3,7 @@
 # To execute this file on a newly created VM run:
 #
 # $ sudo apt-get install git
-# $ git clone https://github.com/highdn/highdn-com.git
+# $ git clone git@github.com:highdn/highdn-com.git
 # $ ./highdn-com/install.sh
 #
 

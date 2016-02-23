@@ -12,7 +12,7 @@ set -o xtrace
 
 sudo apt-get install npm nodejs nodejs-legacy unzip
 
-sudo npm install -g bower
+sudo npm install -g bower polyserve
 
 # Get latest download URL of Google App Engine SDK for Go at
 # https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Go

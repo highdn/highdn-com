@@ -1,29 +1,24 @@
-application: highdn-com
-version: 2
-runtime: go
-api_version: go1
+runtime: go114
 
 handlers:
 - url: /favicon.ico
   static_files: favicon.ico
   upload: favicon.ico
 
-- url: /bower_components
-  static_dir: bower_components
-
-- url: /components
-  static_dir: components
-
 - url: /sw-import.js
   static_files: sw-import.js
   upload: sw-import.js
-  secure: always
+
+- url: /components
+  static_dir: build/prod/components
+
+- url: /node_modules/@polymer/sw-toolbox
+  static_dir: node_modules/sw-toolbox
+
+- url: /node_modules
+  static_dir: build/prod/node_modules
 
 - url: /
-  static_files: index.html
-  upload: index.html
-  secure: always
-
-- url: /.+
-  script: _go_app
+  static_files: build/prod/index.html
+  upload: build/prod/index.html
   secure: always

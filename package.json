@@ -1,0 +1,26 @@
+{
+  "homepage": "https://github.com/highdn/highdn-com",
+  "name": "default",
+  "version": "1.0.0",
+  "resolutions": {
+    "inherits": "2.0.3",
+    "samsam": "1.1.3",
+    "supports-color": "3.1.2",
+    "type-detect": "1.0.0"
+  },
+  "author": "Dmitriy Khramtsov <highdn@gmail.com>",
+  "license": "GPLv3",
+  "dependencies": {
+    "@polymer/iron-icons": "^3.0.0",
+    "@polymer/iron-pages": "^3.0.0",
+    "@polymer/paper-button": "^3.0.0",
+    "@polymer/paper-header-panel": "^3.0.0",
+    "@polymer/paper-icon-button": "^3.0.0",
+    "@polymer/paper-tabs": "^3.0.0",
+    "@polymer/paper-toolbar": "^3.0.0",
+    "@polymer/platinum-sw": "",
+    "@polymer/polymer": "^3.0.0",
+    "@webcomponents/webcomponentsjs": "^2.0.0"
+  },
+  "devDependencies": {}
+}

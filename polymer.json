@@ -1,0 +1,25 @@
+{
+"builds": [
+    {
+      "name": "prod",
+      "preset": "es6-unbundled",
+      "js": {"minify": true},
+      "css": {"minify": true},
+      "addServiceWorker": true      
+    },
+    {
+      "name": "dev",
+      "js": {"minify": false, "compile": false},
+      "css": {"minify": false},
+      "html": {"minify": false},
+      "bundle": false,
+      "addPushManifest": false
+    }
+  ],
+  "extraDependencies": [
+    "node_modules/@webcomponents/webcomponentsjs/bundles/**",
+    "node_modules/@polymer/platinum-sw/service-worker.js",
+    "node_modules/@polymer/platinum-sw/bootstrap/sw-toolbox-setup.js",
+    "components/**"
+  ]
+}

@@ -2,3 +2,6 @@
 appengine-generated/
 node_modules/
 bower_components/
+build/
+.gcloudignore
+package-lock.json

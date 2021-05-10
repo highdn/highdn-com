@@ -3,5 +3,8 @@
 set -o errexit
 set -o xtrace
 
+bower cache clean
 bower update
-goapp deploy
+npm install
+polymer build --name prod
+yes | gcloud app deploy
